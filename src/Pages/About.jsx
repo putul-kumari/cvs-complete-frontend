@@ -96,10 +96,10 @@ const About = () => {
       </section>
 
       {/* IMPACT STATS */}
-      <section className="py-28 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-50">
         <div ref={statsRef} className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-[#0b2a5b] mb-4">Performance at a Glance</h2>
-          <p className="text-gray-700 mb-12 max-w-2xl mx-auto">
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
             We have helped organizations worldwide with advanced cybersecurity solutions, building trust and delivering measurable results.
           </p>
           <div className="grid md:grid-cols-4 gap-6">

@@ -4,7 +4,6 @@ import Home from "./Pages/Home";
 import Services from "./Pages/Services";
 import ServicesDetails from "./Pages/ServicesDetails";
 import About from "./Pages/About";
-import Blog from "./Pages/Blog";
 import Footer from "./Components/Footer";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsCondition from "./Pages/Terms&Conditon";
@@ -15,6 +14,8 @@ import Login from "./Pages/Login";
 import Contact from "./Pages/Contact";
 import SecurityApproach from "./Pages/SecurityApproach";
 import GetStarted from "./Pages/GetStarted";
+import Team from "./Pages/Team";
+import Project from "./Pages/Project";
 
 function App() {
   return (
@@ -29,7 +30,6 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/services-details" element={<ServicesDetails />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsCondition/>} />
           <Route path="/faq" element={<FAQs/>} />
@@ -38,6 +38,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/security-approach" element={<SecurityApproach />} />
           <Route path="/getstarted" element={<GetStarted />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/project" element={<Project/>} />
+
           
             
 

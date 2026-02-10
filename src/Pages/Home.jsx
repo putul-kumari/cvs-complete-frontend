@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Services from "./Services"; 
+import Services from "./Services";
+import Project from "./Project";
+import Team from "./Team";
 import About from "./About";
-import Blog from "./Blog";
 
 const Home = () => {
   const [active, setActive] = useState(false);
@@ -16,12 +17,12 @@ const Home = () => {
       {/* HERO SECTION */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center bg-[linear-gradient(120deg,#ffffff_55%,#0b2a5b_45%)]"
+        className="relative min-h-screen flex items-start pt-20 bg-[linear-gradient(120deg,#ffffff_55%,#0b2a5b_45%)]"
       >
         {/* background effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(11,42,91,0.15),transparent_40%),radial-gradient(circle_at_80%_70%,rgba(22,61,130,0.25),transparent_45%)]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-16">
           {/* LEFT CONTENT */}
           <div
             className={`transition-all duration-1000 ${
@@ -30,21 +31,24 @@ const Home = () => {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <span className="inline-block mb-6 px-5 py-2 rounded-full bg-[#e8eef8] text-[#0b2a5b] font-semibold text-sm">
+            <span className="inline-block mb-2 px-5 py-2 rounded-full bg-[#e8eef8] text-[#0b2a5b] font-semibold text-sm">
               Enterprise Cybersecurity Solutions
             </span>
 
-            <h1 className="text-5xl font-black leading-tight mb-6">
-              Welcome to{" "}
-              <span className="text-[#0b2a5b] text-4xl">
+            <h1 className="font-black leading-tight mb-7">
+              <span className="block text-5xl text-slate-900">
+                Welcome to
+              </span>
+              <span className="block text-[#0b2a5b] text-4xl">
                 CODEVIRUS SECURITY
               </span>
             </h1>
 
-            <p className="text-lg text-slate-700 max-w-xl mb-10 leading-relaxed">
-              We protect your network with layered security, combining next-gen
-              firewalls, intrusion prevention, secure access, and zero-trust
-              principles.
+            <p className="text-lg text-slate-700 max-w-xl mb-8 leading-relaxed">
+              We protect your network with layered security, combining
+              next-generation firewalls, intrusion prevention systems,
+              secure access controls, and zero-trust principles to defend
+              modern enterprises against evolving cyber threats.
             </p>
 
             <div className="flex flex-wrap gap-5">
@@ -55,12 +59,12 @@ const Home = () => {
                 Get Started
               </Link>
 
-             <Link
-               to="/security-approach"
+              <Link
+                to="/security-approach"
                 className="px-9 py-3 rounded-full font-bold border-2 border-[#0b2a5b] text-[#0b2a5b] hover:bg-[#0b2a5b] hover:text-white transition"
-               >
-              Our Security Approach
-             </Link>
+              >
+                Our Security Approach
+              </Link>
             </div>
           </div>
 
@@ -98,15 +102,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* --- SERVICES SECTION --- */}
-      <Services /> {/* Services page placed below Home */}
-      {/* About Section */}
+      <Services />
+       <Project/>
+      <Team/>
       <About />
-
-      {/* Blog Section */}
-      <Blog />
-      
-
+     
     </div>
   );
 };

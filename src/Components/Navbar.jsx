@@ -15,8 +15,10 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
+    { name: "Projects", path: "/project" },
+    { name: "Team", path: "/team" },
     { name: "About Us", path: "/about" },
-    { name: "Blog", path: "/blog" },
+  
   ];
 
   return (
@@ -31,7 +33,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Company Logo"
-            className="h-12 w-auto object-contain"
+            className="h-15 w-auto object-contain"
           />
         </Link>
 
@@ -56,12 +58,6 @@ const Navbar = () => {
             placeholder="Search…"
             className="px-4 py-2 rounded-full border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#0b2a5b] text-sm"
           />
-
-          <Link to="/signup">
-            <button className="px-4 py-2 rounded-full border border-[#0b2a5b] text-[#0b2a5b] font-semibold hover:bg-[#0b2a5b] hover:text-white transition">
-              Sign Up
-            </button>
-          </Link>
 
           <Link to="/login">
             <button className="px-4 py-2 rounded-full bg-[#0b2a5b] text-white font-semibold hover:bg-[#163d82] transition">
@@ -104,12 +100,6 @@ const Navbar = () => {
             placeholder="Search…"
             className="w-full px-4 py-2 rounded-full border border-slate-300"
           />
-
-          <Link to="/signup" onClick={() => setOpen(false)}>
-            <button className="w-full py-2 rounded-full border border-[#0b2a5b]">
-              Sign Up
-            </button>
-          </Link>
 
           <Link to="/login" onClick={() => setOpen(false)}>
             <button className="w-full py-2 rounded-full bg-[#0b2a5b] text-white">
