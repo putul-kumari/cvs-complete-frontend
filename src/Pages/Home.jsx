@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Services from "./Services";
 import Project from "./Project";
-import Team from "./Team";
 import About from "./About";
 
 const Home = () => {
@@ -104,7 +103,7 @@ const Home = () => {
 
       <Services />
        <Project/>
-      <Team/>
+  
       <About />
      
     </div>
